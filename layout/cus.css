@@ -1,0 +1,27 @@
+.invoice-table{
+    border: solid 3px #A9A9A9;
+}
+
+.invoice-table th {
+    background: #e0e0e0;
+    border: solid 2px #A9A9A9;
+}
+
+.invoice-table  td{
+    border: solid 2px #A9A9A9;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.invoice-table td input{
+    width: 100%;
+    height: 30px;
+    background: #eee;
+}
+.invoice-footer{
+    float: left !important;
+    text-align: left !important;
+}
+.underline{
+    border-bottom: 3px double;
+}
