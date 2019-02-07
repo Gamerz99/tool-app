@@ -79,7 +79,6 @@
                     <!-- /.col -->
                 </div>
                 <?php echo form_close(); ?>
-                <a href="<?php echo base_url(); ?>index.php/user/forgetpassword">Get a new password.</a><br>
             </div>
         </div>
         <!-- /.login-box -->

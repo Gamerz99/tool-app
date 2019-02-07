@@ -27,9 +27,7 @@ $this->load->view('layout/header1', $data);
         </ol>
     </section>
 
-    <!-- Main content -->
     <section class="content">
-        <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <!-- small box -->
