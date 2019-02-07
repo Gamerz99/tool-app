@@ -75,7 +75,7 @@ class MainMenu {
     }
 
     function chek_childs($id, $type) {
-        $query = $this->ci->db->query("select * from mainmenu where parent_id = " . $id . " and type = " . $type . "");
+        $query = $this->ci->db->query("select * from mainmenu where parent_id = " . $id . " and type = " . $type );
         $index = 0;
         foreach ($query->result() as $row) {
             $index++;
@@ -91,7 +91,7 @@ class MainMenu {
         } else {
             $html_out .= " <ul class='treeview-menu'>";
         }
-        $query = $this->ci->db->query("select * from  mainmenu where parent_id = $id and  type = $type");
+        $query = $this->ci->db->query("select * from  mainmenu where parent_id = $id and  type = " . $type. " order by position");
 
         foreach ($query->result() as $row) {
             $id = $row->id;

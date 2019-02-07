@@ -52,7 +52,7 @@ $this->load->view('layout/header2', $data);
                                                 <td> <?php echo $title[$employee['job_title']] ?></td>
                                                 <td> <?php echo $employee['phone'] ?></td>
                                                 <td> <?php echo $employee['created_at'] ?></td>
-                                                <td class="center">
+                                                <td width="150px" class="center">
                                                     <?php echo form_open('settings/delete_employee', 'id="frm1' . $employee['id'] . '"'); ?>
                                                     <span class="btn-group">
                                                         <a href="<?php echo base_url(); ?>index.php/settings/add_employee/<?php echo $employee['id'] ?>"

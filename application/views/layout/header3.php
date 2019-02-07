@@ -64,8 +64,8 @@
                                         <img src="<?php echo base_url(); ?>profile/thumb/default.jpg" class="img-circle" alt="User Image">
                                     <?php } ?>
                                     <p>
-                                        TOOL (PVT) LTD
-                                        <small>Since 2000</small>
+                                        Schindler Management Ltd
+                                        <small>Since 1874</small>
                                     </p>
                                 </li>
                                 <li class="user-footer">

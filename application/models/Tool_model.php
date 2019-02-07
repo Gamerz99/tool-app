@@ -21,5 +21,14 @@ class Tool_model extends MY_Model {
         return $data;
     }
 
+    public function brand($brand=null) {
+        $this->db->select('*');
+        if($brand){
+            $this->db->where('brand = '. $brand);
+        }
+        $q = $this->db->get('tool');
+        $q = $q->result_array();
+        return $q;
+    }
 
 }

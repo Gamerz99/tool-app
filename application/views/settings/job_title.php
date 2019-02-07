@@ -48,7 +48,7 @@ $this->load->view('layout/header2', $data);
                                                 <td> <?php echo $title['id'] ?></td>
                                                 <td> <?php echo $title['name'] ?></td>
                                                 <td> <?php echo $title['created_at'] ?></td>
-                                                <td class="center">
+                                                <td width="150px" class="center">
                                                     <?php echo form_open('settings/delete_job_title', 'id="frm1' . $title['id'] . '"'); ?>
                                                     <span class="btn-group">
                                                         <a href="<?php echo base_url(); ?>index.php/settings/add_job_title/<?php echo $title['id'] ?>"

@@ -8,7 +8,7 @@ class User_model extends MY_Model {
     public function __construct() {
         $this->table = 'user';
         $this->primary_key = 'id';
-        $this->soft_deletes = true;
+        $this->return_as = "array";
         parent::__construct();
     }
 

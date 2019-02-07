@@ -52,7 +52,7 @@ $this->load->view('layout/header2', $data);
                                                 <td> <?php echo $brand[$tool['brand']] ?></td>
                                                 <td> <?php echo $tool['description'] ?></td>
                                                 <td> <?php echo $tool['created_at'] ?></td>
-                                                <td class="center">
+                                                <td width="150px" class="center">
                                                     <?php echo form_open('settings/delete_tool', 'id="frm1' . $tool['id'] . '"'); ?>
                                                     <span class="btn-group">
                                                         <a href="<?php echo base_url(); ?>index.php/settings/add_tool/<?php echo $tool['id'] ?>"

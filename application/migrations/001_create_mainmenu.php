@@ -63,11 +63,15 @@ class Migration_Create_mainmenu extends CI_Migration {
 
         $data = array(
             array('title' => 'Home','url' => 'index.php/admin','position' => 0,'target' => 0,'parent_id' => 0,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-home'),
-            array('title' => 'Setting','url' => 'index.php/settings','position' => 15,'target' => 2,'parent_id' => 0,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-cogs'),
+            array('title' => 'Setting','url' => 'index.php/settings','position' => 9,'target' => 2,'parent_id' => 0,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-cogs'),
             array('title' => 'Tool','url' => 'settings/tool','position' => 0,'target' => 2,'parent_id' => 2,'show_menu' => 1,'type' => 1,'icon' => 'fa fa fa-wrench'),
             array('title' => 'Brand','url' => 'settings/brand','position' => 1,'target' => 2,'parent_id' => 2,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-support'),
             array('title' => 'Employee','url' => 'settings/employee','position' => 2,'target' => 2,'parent_id' => 2,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-user'),
-            array('title' => 'Job Title','url' => 'settings/job_title','position' => 3,'target' => 2,'parent_id' => 2,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-graduation-cap')
+            array('title' => 'Job Title','url' => 'settings/job_title','position' => 3,'target' => 2,'parent_id' => 2,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-graduation-cap'),
+            array('title' => 'Stock','url' => 'index.php/stock','position' => 2,'target' => 7,'parent_id' => 0,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-recycle'),
+            array('title' => 'Add Tool','url' => 'stock/add_tool','position' => 1,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-plus-circle'),
+            array('title' => 'Tool List','url' => 'stock/tool_list','position' => 2,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-bars'),
+            array('title' => 'Tool Report','url' => 'stock/tool_report','position' => 5,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-line-chart')
         );
         $this->db->insert_batch('mainmenu', $data);
     }

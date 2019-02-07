@@ -48,7 +48,7 @@ $this->load->view('layout/header2', $data);
                                                 <td> <?php echo $brand['id'] ?></td>
                                                 <td> <?php echo $brand['name'] ?></td>
                                                 <td> <?php echo $brand['created_at'] ?></td>
-                                                <td class="center">
+                                                <td width="150px" class="center">
                                                     <?php echo form_open('settings/delete_brand', 'id="frm1' . $brand['id'] . '"'); ?>
                                                     <span class="btn-group">
                                                         <a href="<?php echo base_url(); ?>index.php/settings/add_brand/<?php echo $brand['id'] ?>"
