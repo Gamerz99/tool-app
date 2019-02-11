@@ -17,7 +17,9 @@ $config = array(
     'save_employee' => array(
         array('field' => 'name', 'label' => 'name', 'rules' => 'required'),
         array('field' => 'phone', 'label' => 'phone', 'rules' => 'required|numeric|min_length[10]|max_length[10]'),
-        array('field' => 'job_title', 'label' => 'job_title','rules' => 'required')
+        array('field' => 'job_title', 'label' => 'job_title','rules' => 'required'),
+        array('field' => 'email', 'label' => 'email','rules' => 'required'),
+        array('field' => 'password', 'label' => 'password','rules' => 'required')
     )
 
 );

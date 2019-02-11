@@ -35,7 +35,7 @@ $this->load->view('layout/header2', $data);
                         echo form_input('name', $employee['name'], 'class="form-control"'); ?>
                     </div>
                     <div class="col-md-6">
-                        <label for="first-name"> Brand</span>
+                        <label for="first-name"> Job Title</span>
                         </label>
                         <?php
                         echo form_dropdown('job_title', $title, $employee['job_title'], 'class="form-control col-md-7 col-xs-12"');
@@ -49,7 +49,22 @@ $this->load->view('layout/header2', $data);
                         <?php
                         echo form_input('phone', $employee['phone'], 'class="form-control"'); ?>
                     </div>
-                </div><br>
+                    <div class="col-md-6">
+                        <label for="first-name"> Email
+                        </label>
+                        <?php
+                        echo form_input('email', $employee['email'], 'class="form-control"'); ?>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="first-name"> Password
+                        </label>
+                        <?php
+                        echo form_password('password', $employee['password'], 'class="form-control"'); ?>
+                    </div>
+                </div>
+                <br>
                 <div class="box-footer">
                     <button type="submit" value="Validate!" class="btn btn-success pull-right">Submit</button>
                 </div>
@@ -84,6 +99,13 @@ $this->load->view('layout/footer2');
                     number: true,
                     minlength:10,
                     maxlength:10
+                },
+                email: {
+                    required: true,
+                    email: true,
+                },
+                password: {
+                    required: true
                 }
             },
             errorPlacement: function (error, element) {

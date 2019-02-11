@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_Create_employee extends CI_Migration {
+class Migration_Create_stock_log extends CI_Migration {
 
     public function up() {
         $this->dbforge->add_field(array(
@@ -12,29 +12,23 @@ class Migration_Create_employee extends CI_Migration {
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ),
-            'name' => array(
-                'type' => 'VARCHAR',
-                'constraint' => 100,
-                'null' => TRUE
-            ),
-            'job_title' => array(
+            'employee' => array(
                 'type' => 'INT',
                 'constraint' => 11,
                 'null' => TRUE
             ),
-            'phone' => array(
-                'type' => 'VARCHAR',
-                'constraint' => 10,
+            'tool' => array(
+                'type' => 'INT',
+                'constraint' => 11,
                 'null' => TRUE
             ),
-            'email' => array(
-                'type' => 'VARCHAR',
-                'constraint' => 100,
+            'time' => array(
+                'type' => 'TIME',
                 'null' => TRUE
             ),
-            'password' => array(
-                'type' => 'VARCHAR',
-                'constraint' => 100,
+            'type' => array(
+                'type' => 'INT',
+                'constraint' => 11,
                 'null' => TRUE
             ),
             'created_at' => array(
@@ -58,18 +52,12 @@ class Migration_Create_employee extends CI_Migration {
             )
         ));
         $this->dbforge->add_key('id', TRUE);
-        $this->dbforge->create_table('employee');
+        $this->dbforge->create_table('stock_log');
 
-        $data = array(
-            array('name' => 'Emp 1','job_title' => 1,'phone' => '0778987879','email' => 'emp1@gmail.com','password' => 'emp1','created_at' => '2018-12-07','uid'=> 1),
-            array('name' => 'Emp 2','job_title' => 2,'phone' => '0713345456','email' => 'emp2@gmail.com','password' => 'emp2','created_at' => '2018-12-07','uid'=> 1)
-        );
-
-        $this->db->insert_batch('employee', $data);
     }
 
     public function down() {
-        $this->dbforge->drop_table('employee');
+        $this->dbforge->drop_table('stock_log');
     }
 
 }

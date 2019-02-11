@@ -4,6 +4,7 @@ namespace Restserver\Libraries;
 use CI_Controller;
 use Exception;
 use stdClass;
+require APPPATH . 'libraries/Format.php';
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 

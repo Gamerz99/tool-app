@@ -71,7 +71,11 @@ class Migration_Create_mainmenu extends CI_Migration {
             array('title' => 'Stock','url' => 'index.php/stock','position' => 2,'target' => 7,'parent_id' => 0,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-recycle'),
             array('title' => 'Add Tool','url' => 'stock/add_tool','position' => 1,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-plus-circle'),
             array('title' => 'Tool List','url' => 'stock/tool_list','position' => 2,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-bars'),
-            array('title' => 'Tool Report','url' => 'stock/tool_report','position' => 5,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-line-chart')
+            array('title' => 'Tool Report','url' => 'stock/tool_report','position' => 5,'target' => 7,'parent_id' => 7,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-line-chart'),
+            array('title' => 'Tool Manager','url' => 'index.php/tool','position' => 1,'target' => 11,'parent_id' => 0,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-institution'),
+            array('title' => 'Tool Status','url' => 'tool/tool_status','position' => 1,'target' => 11,'parent_id' => 11,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-lightbulb-o'),
+            array('title' => 'Stock Log','url' => 'tool/stock_log','position' => 2,'target' => 11,'parent_id' => 11,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-area-chart'),
+            array('title' => 'Tool Report','url' => 'tool/tool_report','position' => 3,'target' => 11,'parent_id' => 11,'show_menu' => 1,'type' => 1,'icon' => 'fa fa-line-chart'),
         );
         $this->db->insert_batch('mainmenu', $data);
     }
