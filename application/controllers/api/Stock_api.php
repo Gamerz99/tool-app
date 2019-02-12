@@ -1,14 +1,16 @@
 <?php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
-require APPPATH . '/libraries/REST_Controller.php';
+require APPPATH . 'libraries/REST_Controller.php';
+use Restserver\Libraries\REST_Controller;
 
-class Stock_api extends \Restserver\Libraries\REST_Controller  {
+class Stock_api extends REST_Controller  {
 
     function __construct() {
         parent::__construct();
         $this->load->helper('my_api');
         $this->methods['tool_list_get']['limit'] = 100;
+        $this->methods['stock_list_get']['limit'] = 100;
     }
 
     public function tool_list_get($datefrom=null,$dateto=null,$brand=null) {
@@ -47,5 +49,16 @@ class Stock_api extends \Restserver\Libraries\REST_Controller  {
         echo($arry);
     }
 
+
+    public function stock_list_get($tool,$brand){
+        $this->load->model('stock_model');
+
+        $stocks = $this->stock_model->get_tool($tool,$brand);
+        if($stocks){
+            $this->response(array('message' => 'success','stocks'=>$stocks), REST_Controller::HTTP_OK);
+        }else{
+            $this->response(array('message' => 'not found'), REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 
 }

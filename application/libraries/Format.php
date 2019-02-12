@@ -1,5 +1,6 @@
 <?php
 namespace Restserver\Libraries;
+use Exception;
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -92,13 +93,13 @@ class Format {
         // If the provided data is already formatted we should probably convert it to an array
         if ($from_type !== NULL)
         {
-            if (method_exists($this, '_from_' . $from_type))
+            if (method_exists($this, '_from_'.$from_type))
             {
-                $data = call_user_func([$this, '_from_' . $from_type], $data);
+                $data = call_user_func([$this, '_from_'.$from_type], $data);
             }
             else
             {
-                throw new Exception('Format class does not support conversion from "' . $from_type . '".');
+                throw new Exception('Format class does not support conversion from "'.$from_type.'".');
             }
         }
 
@@ -115,7 +116,7 @@ class Format {
      *
      * @return object Instance of the format class
      */
-    public function factory($data, $from_type = NULL)
+    public static function factory($data, $from_type = NULL)
     {
         // $class = __CLASS__;
         // return new $class();
@@ -177,12 +178,6 @@ class Format {
         if ($data === NULL && func_num_args() === 0)
         {
             $data = $this->_data;
-        }
-
-        // turn off compatibility mode as simple xml throws a wobbly if you don't.
-        if (ini_get('zend.ze1_compatibility_mode') == 1)
-        {
-            ini_set('zend.ze1_compatibility_mode', 0);
         }
 
         if ($structure === NULL)
@@ -386,6 +381,9 @@ class Format {
         // Close the handle
         fclose($handle);
 
+        // Convert UTF-8 encoding to UTF-16LE which is supported by MS Excel
+        $csv = mb_convert_encoding($csv, 'UTF-16LE', 'UTF-8');
+
         return $csv;
     }
 
@@ -410,21 +408,21 @@ class Format {
 
         if (empty($callback) === TRUE)
         {
-            return json_encode($data);
+            return json_encode($data, JSON_UNESCAPED_UNICODE);
         }
 
         // We only honour a jsonp callback which are valid javascript identifiers
         elseif (preg_match('/^[a-z_\$][a-z0-9\$_]*(\.[a-z_\$][a-z0-9\$_]*)*$/i', $callback))
         {
             // Return the data as encoded json with a callback
-            return $callback . '(' . json_encode($data) . ');';
+            return $callback.'('.json_encode($data, JSON_UNESCAPED_UNICODE).');';
         }
 
         // An invalid jsonp callback function provided.
         // Though I don't believe this should be hardcoded here
-        $data['warning'] = 'INVALID JSONP CALLBACK: ' . $callback;
+        $data['warning'] = 'INVALID JSONP CALLBACK: '.$callback;
 
-        return json_encode($data);
+        return json_encode($data, JSON_UNESCAPED_UNICODE);
     }
 
     /**
@@ -468,8 +466,8 @@ class Format {
     // INTERNAL FUNCTIONS
 
     /**
-     * @param $data XML string
-     * @return SimpleXMLElement XML element object; otherwise, empty array
+     * @param string $data XML string
+     * @return array XML element object; otherwise, empty array
      */
     protected function _from_xml($data)
     {
@@ -503,7 +501,7 @@ class Format {
     }
 
     /**
-     * @param $data Encoded json string
+     * @param string $data Encoded json string
      * @return mixed Decoded json string with leading and trailing whitespace removed
      */
     protected function _from_json($data)
@@ -512,7 +510,7 @@ class Format {
     }
 
     /**
-     * @param string Data to unserialized
+     * @param string $data Data to unserialize
      * @return mixed Unserialized data
      */
     protected function _from_serialize($data)
@@ -521,12 +519,11 @@ class Format {
     }
 
     /**
-     * @param $data Data to trim leading and trailing whitespace
+     * @param string $data Data to trim leading and trailing whitespace
      * @return string Data with leading and trailing whitespace removed
      */
     protected function _from_php($data)
     {
         return trim($data);
     }
-
 }

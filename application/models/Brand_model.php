@@ -35,4 +35,14 @@ class Brand_model extends MY_Model {
         return $ddarray;
     }
 
+    public function brand($tool = null) {
+        $this->db->select('b.*');
+        if($tool){
+            $this->db->where('t.name = '. '"'.$tool.'"');
+        }
+        $this->db->where('t.brand = b.id');
+        $q = $this->db->get('tool t , brand b');
+        $q = $q->result_array();
+        return $q;
+    }
 }

@@ -2,26 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f67947e-79a0-4729-a106-e28a3a21c3af" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/controllers/Tool.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/controllers/api/Assign_api.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/migrations/009_create_tool_assign.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/migrations/010_create_assign_log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/migrations/011_create_stock_log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Assign_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Log_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/models/Stock_log_model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/tool/stock_log.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/tool/tool_report.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/tool/tool_status.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/form_validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/form_validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/migration.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/migration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/api/Stock_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/api/Stock_api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/api/Tool_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/api/Tool_api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/libraries/Format.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/Format.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/libraries/REST_Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/libraries/REST_Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/migrations/001_create_mainmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/migrations/001_create_mainmenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/migrations/006_create_employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/migrations/006_create_employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/settings/add_employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/settings/add_employee.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/settings/employee.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/settings/employee.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Brand_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Brand_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Stock_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Stock_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Tool_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Tool_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/stock/add_tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/stock/add_tool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/stock/edit_tool.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/stock/edit_tool.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/stock/tool_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/stock/tool_list.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tool/stock_log.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tool/stock_log.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tool/tool_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tool/tool_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/tool/tool_status.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/tool/tool_status.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,44 +26,39 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Tool.php">
+        <entry file="file://$PROJECT_DIR$/application/controllers/api/Tool_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/tool/tool_status.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="66" column="114" selection-start-line="66" selection-start-column="114" selection-end-line="66" selection-end-column="114" />
-              <folding>
-                <element signature="n#style#0;n#small#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#small#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="51">
+              <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/tool/tool_report.php">
+        <entry file="file://$PROJECT_DIR$/application/libraries/REST_Controller.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
-              <caret line="73" column="58" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/Settings.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="70" column="25" selection-start-line="70" selection-start-column="25" selection-end-line="70" selection-end-column="79" />
+            <state relative-caret-position="102">
+              <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+              <folding>
+                <element signature="e#39#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,7 +71,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/views/settings/add_tool.php" />
         <option value="$PROJECT_DIR$/application/views/settings/add_brand.php" />
         <option value="$PROJECT_DIR$/application/views/settings/add_job_title.php" />
         <option value="$PROJECT_DIR$/application/controllers/Settings.php" />
@@ -95,15 +83,9 @@
         <option value="$PROJECT_DIR$/application/libraries/MainMenu.php" />
         <option value="$PROJECT_DIR$/application/controllers/Ajax.php" />
         <option value="$PROJECT_DIR$/application/models/User_model.php" />
-        <option value="$PROJECT_DIR$/application/views/stock/add_tool.php" />
-        <option value="$PROJECT_DIR$/application/views/stock/tool_list.php" />
-        <option value="$PROJECT_DIR$/application/views/stock/edit_tool.php" />
         <option value="$PROJECT_DIR$/application/views/stock/stok_report.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/Stock_api.php" />
-        <option value="$PROJECT_DIR$/application/models/Stock_model.php" />
         <option value="$PROJECT_DIR$/application/controllers/Stock.php" />
         <option value="$PROJECT_DIR$/application/views/stock/tool_report.php" />
-        <option value="$PROJECT_DIR$/application/models/Tool_model.php" />
         <option value="$PROJECT_DIR$/application/views/layout/footer1.php" />
         <option value="$PROJECT_DIR$/application/views/layout/footer2.php" />
         <option value="$PROJECT_DIR$/application/views/layout/footer3.php" />
@@ -112,8 +94,6 @@
         <option value="$PROJECT_DIR$/application/views/layout/header1.php" />
         <option value="$PROJECT_DIR$/application/views/admin/index.php" />
         <option value="$PROJECT_DIR$/application/views/user/login.php" />
-        <option value="$PROJECT_DIR$/application/libraries/Format.php" />
-        <option value="$PROJECT_DIR$/application/libraries/REST_Controller.php" />
         <option value="$PROJECT_DIR$/application/migrations/010_create_assign_log.php" />
         <option value="$PROJECT_DIR$/application/migrations/stock_log.php" />
         <option value="$PROJECT_DIR$/application/models/Stock_log.php" />
@@ -127,12 +107,21 @@
         <option value="$PROJECT_DIR$/application/config/migration.php" />
         <option value="$PROJECT_DIR$/application/models/Assign_model.php" />
         <option value="$PROJECT_DIR$/application/models/Log_model.php" />
-        <option value="$PROJECT_DIR$/application/views/tool/stock_log.php" />
         <option value="$PROJECT_DIR$/application/models/Stock_log_model.php" />
-        <option value="$PROJECT_DIR$/application/controllers/api/Tool_api.php" />
         <option value="$PROJECT_DIR$/application/controllers/Tool.php" />
         <option value="$PROJECT_DIR$/application/views/tool/tool_status.php" />
         <option value="$PROJECT_DIR$/application/views/tool/tool_report.php" />
+        <option value="$PROJECT_DIR$/application/views/tool/stock_log.php" />
+        <option value="$PROJECT_DIR$/application/views/stock/tool_list.php" />
+        <option value="$PROJECT_DIR$/application/views/stock/edit_tool.php" />
+        <option value="$PROJECT_DIR$/application/views/stock/add_tool.php" />
+        <option value="$PROJECT_DIR$/application/models/Brand_model.php" />
+        <option value="$PROJECT_DIR$/application/models/Tool_model.php" />
+        <option value="$PROJECT_DIR$/application/models/Stock_model.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/Stock_api.php" />
+        <option value="$PROJECT_DIR$/application/libraries/Format.php" />
+        <option value="$PROJECT_DIR$/application/controllers/api/Tool_api.php" />
+        <option value="$PROJECT_DIR$/application/libraries/REST_Controller.php" />
       </list>
     </option>
   </component>
@@ -171,14 +160,26 @@
               <item name="umesha" type="b2602c69:ProjectViewProjectNode" />
               <item name="umesha" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="umesha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="umesha" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="umesha" type="b2602c69:ProjectViewProjectNode" />
+              <item name="umesha" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="umesha" type="b2602c69:ProjectViewProjectNode" />
               <item name="umesha" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="tool" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -220,18 +221,21 @@
       <workItem from="1549285875298" duration="4284000" />
       <workItem from="1549341331314" duration="41000" />
       <workItem from="1549541441226" duration="16217000" />
-      <workItem from="1549885563037" duration="15423000" />
+      <workItem from="1549885563037" duration="16023000" />
+      <workItem from="1549934179527" duration="180000" />
+      <workItem from="1549943254078" duration="4264000" />
+      <workItem from="1549948350014" duration="4000" />
+      <workItem from="1549951457106" duration="673000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35965000" />
+    <option name="totallyTimeSpent" value="41686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="978" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16862327" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17502668" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -249,7 +253,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32977587" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,13 +270,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/models/Title_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="5" lean-forward="true" selection-end-line="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/Ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -287,31 +284,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/stock/add_tool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1173">
-          <caret line="30" column="36" selection-end-line="201" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/settings/add_tool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="33" column="59" lean-forward="true" selection-end-line="88" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/settings/add_brand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/stock/edit_tool.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -385,34 +361,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Brand_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/User_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/Format.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/libraries/REST_Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding>
-            <element signature="e#39#57#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -498,13 +450,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Tool_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/Assign_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -516,27 +461,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-238">
           <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/stock/tool_report.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="92" column="31" lean-forward="true" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/stock/tool_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="109" column="3" lean-forward="true" selection-start-line="109" selection-start-column="3" selection-end-line="133" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/Stock_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="101" />
         </state>
       </provider>
     </entry>
@@ -554,24 +478,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Stock_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="37" column="28" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/settings/brand.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="223">
           <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="68" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/Assign_api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="994">
-          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
@@ -582,17 +492,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tool/stock_log.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tool/tool_status.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="107" column="26" lean-forward="true" selection-start-line="107" selection-start-column="26" selection-end-line="107" selection-end-column="26" />
+        <state relative-caret-position="246">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#small#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#small#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/api/Tool_api.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tool/tool_report.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="122" column="71" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="71" />
+        <state relative-caret-position="297">
+          <caret line="71" column="56" lean-forward="true" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
         </state>
       </provider>
     </entry>
@@ -603,28 +517,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Tool.php">
+    <entry file="file://$PROJECT_DIR$/application/views/tool/stock_log.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="57" lean-forward="true" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        <state relative-caret-position="385">
+          <caret line="72" column="46" selection-start-line="72" selection-start-column="46" selection-end-line="72" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tool/tool_status.php">
+    <entry file="file://$PROJECT_DIR$/application/views/stock/tool_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="66" column="114" selection-start-line="66" selection-start-column="114" selection-end-line="66" selection-end-column="114" />
+        <state relative-caret-position="289">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/stock/tool_report.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1036">
+          <caret line="92" column="31" lean-forward="true" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/stock/edit_tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/stock/add_tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1275">
+          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
           <folding>
-            <element signature="n#style#0;n#small#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#small#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/tool/tool_report.php">
+    <entry file="file://$PROJECT_DIR$/application/views/settings/add_tool.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="73" column="58" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+        <state relative-caret-position="-77">
+          <caret line="31" column="32" lean-forward="true" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/settings/tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Tool.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/Assign_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="79" column="27" lean-forward="true" selection-start-line="79" selection-start-column="27" selection-end-line="79" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Brand_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Tool_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="654">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/Stock_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="47" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Stock_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Format.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="529" lean-forward="true" selection-start-line="529" selection-end-line="529" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/api/Tool_api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/REST_Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#39#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

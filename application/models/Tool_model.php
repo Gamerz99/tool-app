@@ -31,4 +31,12 @@ class Tool_model extends MY_Model {
         return $q;
     }
 
+    public function tool() {
+        $this->db->select('*');
+        $this->db->group_by('name');
+        $q = $this->db->get('tool');
+        $q = $q->result_array();
+        return $q;
+    }
+
 }

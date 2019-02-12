@@ -43,7 +43,7 @@ $this->load->view('layout/header2', $data);
                                 <th width="10%">Brand</th>
                                 <th width="30%">Description</th>
                                 <th width="10%">Qty</th>
-                                <th width="10%">Barcode</th>
+                                <th width="10%">Code</th>
                             </tr>
                             </thead>
                             <tbody>

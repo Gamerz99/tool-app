@@ -1,16 +1,20 @@
 <?php
-
+use Restserver\Libraries\REST_Controller;
 defined('BASEPATH') OR exit('No direct script access allowed');
-require APPPATH . '/libraries/REST_Controller.php';
+require APPPATH . 'libraries/REST_Controller.php';
 
-class Tool_api extends \Restserver\Libraries\REST_Controller  {
+class Tool_api extends REST_Controller  {
 
     function __construct() {
+        header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
         parent::__construct();
         $this->load->helper('my_api');
         $this->methods['tool_report_get']['limit'] = 100;
         $this->methods['tool_log_report_get']['limit'] = 100;
         $this->methods['stock_log_report_get']['limit'] = 100;
+        $this->methods['tool_list_get']['limit'] = 100;
+        $this->methods['brand_list_get']['limit'] = 100;
     }
 
     public function tool_report_get($brands=null) {
@@ -130,6 +134,28 @@ class Tool_api extends \Restserver\Libraries\REST_Controller  {
         $arry .= ' [ "" ,"" ,"" ,"" ,"", "" ,"" ,"" ,"" ,""] ';
         $arry .= " ] } ";
         echo($arry);
+    }
+
+    public function tool_list_get(){
+        $this->load->model('tool_model');
+
+        $tools = $this->tool_model->tool();
+        if($tools){
+            $this->response(array('message' => 'success','tools'=>$tools), REST_Controller::HTTP_OK);
+        }else{
+            $this->response(array('message' => 'not found'), REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
+
+    public function brand_list_get($tool){
+        $this->load->model('brand_model');
+
+        $brands = $this->brand_model->brand($tool);
+        if($brands){
+            $this->response(array('message' => 'success','brands'=>$brands), REST_Controller::HTTP_OK);
+        }else{
+            $this->response(array('message' => 'not found'), REST_Controller::HTTP_BAD_REQUEST);
+        }
     }
 
 }

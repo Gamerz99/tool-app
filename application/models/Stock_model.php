@@ -35,10 +35,16 @@ class Stock_model extends MY_Model {
         return $q;
     }
 
-    public function get_tool() {
-        $this->db->select('*');
-        $this->db->where('stat != 2');
-        $q = $this->db->get('stock');
+    public function get_tool($tool = null, $brand = null) {
+        $this->db->select('s.*');
+        if($tool){
+            $this->db->where('t.name = '. '"'.$tool.'"');
+        }
+        if($brand){
+            $this->db->where('t.brand = '. '"'.$brand.'"');
+        }
+        $this->db->where('s.stat != 2 AND s.tool = t.id');
+        $q = $this->db->get('stock s, tool t');
         $q = $q->result_array();
         return $q;
     }

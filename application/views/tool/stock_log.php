@@ -70,7 +70,7 @@ $this->load->view('layout/header2', $data);
                                         <th> Employee </th>
                                         <th> Tool name </th>
                                         <th> Brand </th>
-                                        <th> Barcode </th>
+                                        <th> Code </th>
                                         <th> Type </th>
                                         <th> Date </th>
                                         <th> Time </th>

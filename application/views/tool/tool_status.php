@@ -34,7 +34,7 @@ $this->load->view('layout/header2', $data);
                                         <th> Tool name </th>
                                         <th> Brand </th>
                                         <th> Description </th>
-                                        <th> Barcode </th>
+                                        <th> Code </th>
                                         <th> Reserved By </th>
                                         <th> Status </th>
                                     </tr>
@@ -52,7 +52,7 @@ $this->load->view('layout/header2', $data);
                                                 <td> <?php
                                                     $reserved = "--";
                                                     if($stock['stat']==3){
-                                                        $assign = $this->assign_model->where(array('tool'=>$stock['tool']))->get();
+                                                        $assign = $this->assign_model->where(array('tool'=>$stock['id']))->get();
                                                         $reserved = $employee[$assign['employee']];
                                                     }
                                                     echo $reserved
