@@ -79,8 +79,6 @@ $this->load->view('layout/footer2');
     });
 
     $("#search").click(function () {
-        var datefrom = $('#datefrom').val();
-        var dateto = $('#dateto').val();
         var brand = $('#brand').val();
 
         $('#example4').DataTable().destroy();

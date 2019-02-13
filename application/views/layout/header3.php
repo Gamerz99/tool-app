@@ -33,7 +33,7 @@
         <header class="main-header">
             <a href="<?php echo base_url(); ?>" class="logo">
                 <span class="logo-mini">TOOL</span>
-                <img class="logo-top" src="<?php echo base_url(); ?>templates/dist/img/aqua.png">
+                <img class="logo-top" src="<?php echo base_url(); ?>layout/dist/img/aqua.png">
             </a>
             <nav class="navbar navbar-static-top">
                 <?php if (isset($msg)) { ?>

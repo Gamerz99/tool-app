@@ -1,18 +1,23 @@
 <?php
-
-defined('BASEPATH') OR exit('No direct script access allowed');
-require APPPATH . 'libraries/REST_Controller.php';
 use Restserver\Libraries\REST_Controller;
+defined('BASEPATH') OR exit('No direct script access allowed');
+require APPPATH . '/libraries/REST_Controller.php';
 
 class Assign_api extends REST_Controller  {
 
-    function __construct() {
+    function __construct($config = 'rest') {
+        parent::__construct($config);
         header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-        parent::__construct();
+        $method = $_SERVER['REQUEST_METHOD'];
+        if ($method == "OPTIONS") {
+            die();
+        }
         $this->load->helper('my_api');
         $this->methods['assign_tool_post']['limit'] = 100;
         $this->methods['unassign_tool_post']['limit'] = 100;
+        $this->methods['tool_list_get']['limit'] = 100;
     }
 
     public function assign_tool_post() {
@@ -108,4 +113,32 @@ class Assign_api extends REST_Controller  {
     }
 
 
+    public function tool_list_get($employee){
+        $this->load->model('assign_model');
+        $this->load->model('stock_model');
+        $this->load->model('tool_model');
+        $this->load->model('brand_model');
+
+        $code = $this->stock_model->as_dropdown('barcode')->get_all();
+        $tooid= $this->stock_model->as_dropdown('tool')->get_all();
+        $tool= $this->tool_model->as_dropdown('name')->get_all();
+        $brandid= $this->tool_model->as_dropdown('brand')->get_all();
+        $brand= $this->brand_model->as_dropdown('name')->get_all();
+        $assigns = $this->assign_model->where(array('employee'=>$employee))->get_all();
+
+        $count = 0 ;
+        foreach ($assigns as $item) {
+            $barcode = $code[$item['tool']];
+            $assigns[$count]['barcode']= $barcode;
+            $assigns[$count]['tool']= $tool[$tooid[$item['tool']]];
+            $assigns[$count]['brand']= $brand[$brandid[$tooid[$item['tool']]]];
+            $count ++ ;
+        }
+
+        if($assigns){
+            $this->response(array('message' => 'success','assigns'=>$assigns), REST_Controller::HTTP_OK);
+        }else{
+            $this->response(array('message' => 'not found'), REST_Controller::HTTP_BAD_REQUEST);
+        }
+    }
 }

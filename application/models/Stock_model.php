@@ -49,6 +49,20 @@ class Stock_model extends MY_Model {
         return $q;
     }
 
+    public function get_available_tool($tool = null, $brand = null) {
+        $this->db->select('s.*');
+        if($tool){
+            $this->db->where('t.name = '. '"'.$tool.'"');
+        }
+        if($brand){
+            $this->db->where('t.brand = '. '"'.$brand.'"');
+        }
+        $this->db->where('s.stat = 1 AND s.tool = t.id');
+        $q = $this->db->get('stock s, tool t');
+        $q = $q->result_array();
+        return $q;
+    }
+
     public function get_stock($index) {
         $this->db->select_sum('qty');
         $this->db->where('tool', $index);

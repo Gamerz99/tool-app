@@ -5,10 +5,15 @@ require APPPATH . 'libraries/REST_Controller.php';
 
 class Tool_api extends REST_Controller  {
 
-    function __construct() {
+    function __construct($config = 'rest') {
+        parent::__construct($config);
         header('Access-Control-Allow-Origin: *');
+        header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method, Authorization");
         header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-        parent::__construct();
+        $method = $_SERVER['REQUEST_METHOD'];
+        if ($method == "OPTIONS") {
+            die();
+        }
         $this->load->helper('my_api');
         $this->methods['tool_report_get']['limit'] = 100;
         $this->methods['tool_log_report_get']['limit'] = 100;
