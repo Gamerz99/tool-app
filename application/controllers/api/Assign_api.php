@@ -131,6 +131,7 @@ class Assign_api extends REST_Controller  {
             $barcode = $code[$item['tool']];
             $assigns[$count]['barcode']= $barcode;
             $assigns[$count]['tool']= $tool[$tooid[$item['tool']]];
+            $assigns[$count]['stockid']= $item['tool'];
             $assigns[$count]['brand']= $brand[$brandid[$tooid[$item['tool']]]];
             $count ++ ;
         }
