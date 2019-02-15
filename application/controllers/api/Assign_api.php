@@ -124,6 +124,7 @@ class Assign_api extends REST_Controller  {
         $tool= $this->tool_model->as_dropdown('name')->get_all();
         $brandid= $this->tool_model->as_dropdown('brand')->get_all();
         $brand= $this->brand_model->as_dropdown('name')->get_all();
+        $image= $this->tool_model->as_dropdown('image')->get_all();
         $assigns = $this->assign_model->where(array('employee'=>$employee))->get_all();
 
         $count = 0 ;
@@ -133,6 +134,7 @@ class Assign_api extends REST_Controller  {
             $assigns[$count]['tool']= $tool[$tooid[$item['tool']]];
             $assigns[$count]['stockid']= $item['tool'];
             $assigns[$count]['brand']= $brand[$brandid[$tooid[$item['tool']]]];
+            $assigns[$count]['image']=base_url().'tool/'.$image[$tooid[$item['tool']]];
             $count ++ ;
         }
 

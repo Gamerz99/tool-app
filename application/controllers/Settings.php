@@ -97,11 +97,56 @@ class Settings extends MY_Controller {
         if ($this->form_validation->run('save_tool') != false) {
             $this->load->model('tool_model');
             if ($id) {
-                if ($this->tool_model->update($data, $id)) {
+                    $this->tool_model->update($data, $id);
+                    if ($_FILES["image"]["name"]) {
+                        $img = $this->tool_model->get($id);
+
+                        if($img['image'] && $img['image']!="default.svg") {
+                            unlink("tool/". $img['image']);
+                        }
+                        $config['upload_path'] = 'tool/';
+                        $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
+                        $qFile_name = $id;
+                        $type = $_FILES["image"]["type"];
+                        $type = explode('/', $type);
+                        if ($type[1] == "jpeg")
+                            $type[1] = 'jpg';
+
+                        $qFile_name = $qFile_name . "." . $type[1];
+                        $config['file_name'] = $qFile_name;
+                        $this->load->library('upload', $config);
+                        $this->upload->initialize($config);
+                        $this->upload->do_upload('image');
+
+                        $data2 = array(
+                            'image' => $qFile_name
+                        );
+                        $this->tool_model->update($data2, $id);
+                    }
                     $message = 1;
-                }
+
             } else {
-                $this->tool_model->insert($data);
+                $id = $this->tool_model->insert($data);
+                if ($_FILES["image"]["name"]) {
+                    $config['upload_path'] = 'tool/';
+                    $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
+                    $qFile_name = $id;
+                    $type = $_FILES["image"]["type"];
+                    $type = explode('/', $type);
+                    if ($type[1] == "jpeg")
+                        $type[1] = 'jpg';
+
+                    $qFile_name = $qFile_name . "." . $type[1];
+                    $config['file_name'] = $qFile_name;
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+                    $this->upload->do_upload('image');
+
+                    $data2 = array(
+                        'image' => $qFile_name
+                    );
+                    $this->tool_model->update($data2, $id);
+                }
                 $message = 1;
             }
         }

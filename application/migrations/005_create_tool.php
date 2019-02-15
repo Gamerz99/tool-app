@@ -27,6 +27,12 @@ class Migration_Create_tool extends CI_Migration {
                 'constraint' => 500,
                 'null' => TRUE
             ),
+            'image' => array(
+                'type' => 'VARCHAR',
+                'constraint' => 100,
+                'null' => TRUE,
+                'default' => 'default.svg'
+            ),
             'created_at' => array(
                 'type' => 'DATE',
                 'null' => TRUE
@@ -51,8 +57,8 @@ class Migration_Create_tool extends CI_Migration {
         $this->dbforge->create_table('tool');
 
         $data = array(
-            array('name' => 'tool1','brand' => 1,'description' => 'tool1 description','created_at' => '2018-12-07','uid'=> 1),
-            array('name' => 'tool2','brand' => 2,'description' => 'tool2 description','created_at' => '2018-12-07','uid'=> 1)
+            array('name' => 'tool1','brand' => 1,'description' => 'tool1 description','image' => '1.jpg','created_at' => '2018-12-07','uid'=> 1),
+            array('name' => 'tool2','brand' => 2,'description' => 'tool2 description','image' => '2.jpg','created_at' => '2018-12-07','uid'=> 1)
         );
 
         $this->db->insert_batch('tool', $data);

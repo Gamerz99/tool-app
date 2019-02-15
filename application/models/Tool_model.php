@@ -26,6 +26,7 @@ class Tool_model extends MY_Model {
         if($brand){
             $this->db->where('brand = '. $brand);
         }
+        $this->db->where('stat = 1');
         $q = $this->db->get('tool');
         $q = $q->result_array();
         return $q;
@@ -33,6 +34,7 @@ class Tool_model extends MY_Model {
 
     public function tool() {
         $this->db->select('*');
+        $this->db->where('stat = 1');
         $this->db->group_by('name');
         $q = $this->db->get('tool');
         $q = $q->result_array();

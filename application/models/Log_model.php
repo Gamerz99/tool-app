@@ -37,4 +37,16 @@ class Log_model extends MY_Model {
         $q = $q->result_array();
         return $q;
     }
+
+    public function monthly($employee,$datefrom=null,$dateto=null) {
+        $this->db->select('*');
+        if($datefrom&&$dateto) {
+            $this->db->where('created_at BETWEEN CAST( "' . $datefrom . '" AS DATE) AND CAST( "' . $dateto . '" AS DATE) ');
+        }
+        $this->db->where('stat = 1');
+        $this->db->where('employee = '. $employee);
+        $q = $this->db->get('assign_log');
+        $q = $q->result_array();
+        return $q;
+    }
 }

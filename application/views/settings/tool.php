@@ -38,6 +38,7 @@ $this->load->view('layout/header2', $data);
                                         <th> Tool Name </th>
                                         <th> Brand </th>
                                         <th> Description </th>
+                                        <th> Image </th>
                                         <th> Created </th>
                                         <th> Action </th>
                                     </tr>
@@ -51,6 +52,10 @@ $this->load->view('layout/header2', $data);
                                                 <td> <?php echo $tool['name'] ?></td>
                                                 <td> <?php echo $brand[$tool['brand']] ?></td>
                                                 <td> <?php echo $tool['description'] ?></td>
+                                                <td>
+                                                    <a href="<?php echo base_url(); ?>tool/<?php echo $tool['image'] ?>" target="_blank"> <img src="<?php echo base_url(); ?>tool/<?php echo $tool['image'] ?>" height="70px" width="auto"/> </a>
+
+                                                </td>
                                                 <td> <?php echo $tool['created_at'] ?></td>
                                                 <td width="150px" class="center">
                                                     <?php echo form_open('settings/delete_tool', 'id="frm1' . $tool['id'] . '"'); ?>

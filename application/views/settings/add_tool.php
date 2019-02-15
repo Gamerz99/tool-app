@@ -25,7 +25,7 @@ $this->load->view('layout/header2', $data);
                 <h3 class="box-title">please add your tool</h3>
             </div>
             <div class="box-body">
-                <?php echo form_open('settings/save_tool', 'id="form1" data-parsley-validate class=""'); ?>
+                <?php echo form_open_multipart('settings/save_tool', 'id="form1" data-parsley-validate class=""'); ?>
                 <div class="row">
                     <div class="col-md-6">
                         <label for="first-name"> Name <span class="required">*</span>
@@ -48,6 +48,13 @@ $this->load->view('layout/header2', $data);
                         </label>
                         <?php
                         echo form_textarea('description', $tool['description'], 'class="form-control"'); ?>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label class="control-label" for="first-name"> Image <span class="required">*</span>
+                        </label>
+                        <div>
+                            <input type="file" name="image" size="20" />
+                        </div>
                     </div>
                 </div><br>
                 <div class="box-footer">

@@ -62,10 +62,12 @@ class Stock_api extends REST_Controller  {
 
         $stocks = $this->stock_model->get_tool($tool,$brand);
         $tool= $this->tool_model->as_dropdown('name')->get_all();
+        $image= $this->tool_model->as_dropdown('image')->get_all();
         $count = 0 ;
         foreach ($stocks as $item) {
             $name = $tool[$item['tool']];
             $stocks[$count]['tool']= $name;
+            $stocks[$count]['image']= base_url().'tool/'.$image[$item['tool']];
             $count ++ ;
         }
 
@@ -90,6 +92,7 @@ class Stock_api extends REST_Controller  {
         $description= $this->tool_model->as_dropdown('description')->get_all();
         $brandid = $this->tool_model->as_dropdown('brand')->get_all();
         $brand = $this->brand_model->as_dropdown('name')->get_all();
+        $image= $this->tool_model->as_dropdown('image')->get_all();
 
         $reserved = null;
         $phone = null;
@@ -109,6 +112,7 @@ class Stock_api extends REST_Controller  {
             'stat' => $stocks['stat'],
             'reserved' => $reserved,
             'phone' => $phone,
+            'image'=>base_url().'tool/'.$image[$stocks['tool']]
         );
         if($stocks){
             $this->response(array('message' => 'success','stock'=>$res), REST_Controller::HTTP_OK);
